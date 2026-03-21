@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Kayamo Mude | Interactive Portfolio (Scroll One-Page)</title>
-    <!-- Font Awesome Icons (for social links) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* ========== GLOBAL RESET & BASE ========== */
+        /* = GLOBAL RESET & BASE = */
         * {
             margin: 0;
             padding: 0;
@@ -21,14 +20,12 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* ONE-PAGE SCROLLABLE CONTAINER - entire website scrolls from top to bottom */
         .main-website {
             max-width: 1400px;
             margin: 0 auto;
             background: transparent;
         }
 
-        /* each section has spacing and card style */
         .section-card {
             background: rgb(140, 131, 62);
             border-radius: 28px;
@@ -71,7 +68,6 @@
             margin: 15px 0 10px;
         }
 
-        /* STICKY NAVIGATION (scrolls with page, always accessible) */
         .sticky-nav {
             position: sticky;
             top: 10px;
@@ -302,7 +298,7 @@
             margin-top: 15px;
         }
 
-        /* HOME PAGE NEW LAYOUT: PROFILE RIGHT SIDE, CONTENT LEFT SIDE */
+        /* HOME PAGE  */
         .home-flex-container {
             display: flex;
             flex-wrap: wrap;
@@ -387,7 +383,8 @@
         html {
             scroll-behavior: smooth;
         }
-        /* extra styling for profile caption */
+        
+        /*profile caption */
         .photo-caption {
             margin-top: 12px;
             font-size: 0.9rem;
@@ -420,7 +417,7 @@
 </head>
 <body>
 <div class="main-website">
-    <!-- STICKY NAVIGATION - all internal anchor links smooth scroll -->
+    <!--  NAVIGATION - smooth scroll -->
     <div class="sticky-nav">
         <a href="#home">🏠 Home</a>
         <a href="#skill">💡 Skills</a>
@@ -429,7 +426,7 @@
         <a href="#contact">📞 Contact</a>
     </div>
 
-    <!-- ==================== HOME SECTION (restructured: profile right, content left) ==================== -->
+    <!--  HOME SECTION  -->
     <section id="home" class="section-card">
         <div class="header-badge">
             <h1 class="file-header">✨ Kayamo Mude ✨<br> +251 940 662 289 </h1>
@@ -437,7 +434,7 @@
                 CS Undergraduate | Developer | Tech Enthusiast</p>
         </div>
         
-        <!-- FLEX LAYOUT: left side (description + project images), right side (profile photo) -->
+        <!-- FLEX LAYOU t-->
         <div class="home-flex-container">
             <div class="home-left-content">
                 <p  style="font-size: 1.1rem; font-weight: 500; background: rgba(212, 17, 212, 0.7); 
@@ -454,7 +451,7 @@
                 </div>
             </div>
             
-            <!-- RIGHT SIDE: Profile picture with circular animation and camera functionality -->
+            <!-- Profile picture with circular animation-->
             <div class="home-right-profile">
                 <img src="kayya.png" alt="Kayamo Profile" class="profile-circular" id="mainProfilePic">
                 <div style="margin-top: 12px;">
@@ -468,7 +465,7 @@
         </div>
     </section>
 
-    <!-- ==================== SKILL SECTION ==================== -->
+    <!-- SKILL SECTION  -->
     <section id="skill" class="section-card" style="background: #f3e760;">
         <div class="page-header">
             <h1 class="file-header">⚙️ My Technical Skills</h1>
@@ -512,7 +509,7 @@
         </section>
     </section>
 
-    <!-- ==================== ABOUT SECTION (original content + profile) ==================== -->
+    <!--  ABOUT SECTION  -->
     <section id="about" class="section-card" style="background: #030c3f;">
         <div style="background: #0a0b41; border-radius: 30px; padding: 12px; margin-bottom: 20px;">
             <h1 style="color: white;" class="file-header">📖 About Me</h1>
@@ -542,7 +539,7 @@
         </main>
     </section>
 
-    <!-- ==================== PROJECTS SECTION ==================== -->
+    <!--  PROJECTS SECTION  -->
     <section id="projects" class="section-card">
         <div class="page-header">
             <h1 class="file-header">📌 Projects Portfolio</h1>
@@ -565,12 +562,11 @@
         <footer><p class="myRights">© 2026 Kayamo Mude — Project showcase</p></footer>
     </section>
 
-    <!-- ==================== CONTACT SECTION (SOCIAL LINKS FULLY VISIBLE & FUNCTIONAL) ==================== -->
+    <!--  CONTACT SECTION -->
     <section id="contact" class="section-card">
         <div class="page-header">
             <h1 class="file-header">📌 Contact With Me</h1>
         </div>
-        <!-- SOCIAL BAR: All social links appear and are interactive, fixed missing hrefs -->
         <div class="social-bar">
             <div class="social">
                 <a href="https://github.com/kayamo172" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>                
@@ -600,7 +596,7 @@
 
 <script>
     (function() {
-        // 1) SMOOTH SCROLLING for all nav links (the sticky ones) to each section
+        // 1) SMOOTH SCROLLING for all nav links
         const navLinks = document.querySelectorAll('.sticky-nav a');
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
@@ -613,7 +609,7 @@
             });
         });
 
-        // 2) PROFILE PHOTO interactive: toast + animation reset
+        // 2) PROFILE PHOTO interactive
         const profilePhoto = document.getElementById('mainProfilePic');
         if (profilePhoto) {
             profilePhoto.addEventListener('click', () => {
@@ -623,7 +619,7 @@
             });
         }
 
-        // 3) Camera upload function (open camera / file upload)
+        // 3) Camera upload function 
         window.openCamera = function() {
             const fileInput = document.getElementById('cameraInput');
             if (fileInput) {
@@ -646,7 +642,7 @@
             }
         };
 
-        // 4) All images interactive: toast on click
+        // 4) All images interactive
         const allImages = document.querySelectorAll('img');
         allImages.forEach(img => {
             img.addEventListener('click', (e) => {
@@ -665,7 +661,7 @@
             });
         });
 
-        // 6) Project table rows interactive: show extra info
+        // 6) Project table rows interactive
         const tableRows = document.querySelectorAll('.project-table tbody tr');
         tableRows.forEach(row => {
             row.addEventListener('click', () => {
@@ -674,7 +670,7 @@
             });
         });
 
-        // 7) Contact form working properly with validation and alert
+        // 7) Contact form working properly
         const contactForm = document.getElementById('globalContactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
@@ -698,20 +694,13 @@
             });
         }
 
-        // 8) LinkedIn link is now fully functional (real profile link) - no mock needed, but keep interactive toast also?
+        // 8) LinkedIn link, I will fix it 
         const linkedinReal = document.getElementById('linkedinActual');
         if (linkedinReal) {
             linkedinReal.addEventListener('click', (e) => {
-                // actual link works, just additional toast for warmth
                 showToastMessage("🔗 Redirecting to LinkedIn profile — connect with me!");
             });
         }
-
-        // 9) additional hover effects for about images (optional)
-        const aboutImgs = document.querySelectorAll('.about-img, .hover-img');
-        aboutImgs.forEach(img => {
-            img.addEventListener('mouseenter', () => img.style.cursor = 'pointer');
-        });
 
         // Toast helper
         function showToastMessage(text) {
