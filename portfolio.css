@@ -11,14 +11,13 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* ONE-PAGE SCROLLABLE CONTAINER - entire website scrolls from top to bottom */
+        /* entire website scrolls from top to bottom */
         .main-website {
             max-width: 1400px;
             margin: 0 auto;
             background: transparent;
         }
 
-        /* each section has spacing and card style */
         .section-card {
             background: rgb(140, 131, 62);
             border-radius: 28px;
@@ -28,7 +27,6 @@
             transition: transform 0.2s;
         }
 
-        /* header styles */
         .page-header {
             background-color: #0a0b41;
             color: white;
@@ -61,7 +59,7 @@
             margin: 15px 0 10px;
         }
 
-        /* STICKY NAVIGATION (scrolls with page, always accessible) */
+        /* STICKY NAVIGATION */
         .sticky-nav {
             position: sticky;
             top: 10px;
