@@ -1,5 +1,5 @@
 (function() {
-        // 1) SMOOTH SCROLLING for all nav links (the sticky ones) to each section
+        // 1) SMOOTH SCROLLING
         const navLinks = document.querySelectorAll('.sticky-nav a');
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
@@ -12,7 +12,7 @@
             });
         });
 
-        // 2) PROFILE PHOTO interactive: toast + animation reset
+        // 2) PROFILE PHOTO 
         const profilePhoto = document.getElementById('mainProfilePic');
         if (profilePhoto) {
             profilePhoto.addEventListener('click', () => {
@@ -22,7 +22,7 @@
             });
         }
 
-        // 3) Camera upload function (open camera / file upload)
+        // 3) Camera upload function 
         window.openCamera = function() {
             const fileInput = document.getElementById('cameraInput');
             if (fileInput) {
@@ -55,7 +55,7 @@
             });
         });
 
-        // 5) Skill cards: show expertise message
+        // 5) Skill cards
         const skillCards = document.querySelectorAll('.skill-card');
         skillCards.forEach(card => {
             card.addEventListener('click', (e) => {
@@ -64,7 +64,7 @@
             });
         });
 
-        // 6) Project table rows interactive: show extra info
+        // 6) Project table rows interactive
         const tableRows = document.querySelectorAll('.project-table tbody tr');
         tableRows.forEach(row => {
             row.addEventListener('click', () => {
@@ -73,7 +73,7 @@
             });
         });
 
-        // 7) Contact form working properly with validation and alert
+        // 7) Contact form with validation and alert
         const contactForm = document.getElementById('globalContactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
@@ -97,11 +97,10 @@
             });
         }
 
-        // 8) LinkedIn link is now fully functional (real profile link) - no mock needed, but keep interactive toast also?
+        // 8) LinkedIn 
         const linkedinReal = document.getElementById('linkedinActual');
         if (linkedinReal) {
             linkedinReal.addEventListener('click', (e) => {
-                // actual link works, just additional toast for warmth
                 showToastMessage("🔗 Redirecting to LinkedIn profile — connect with me!");
             });
         }
