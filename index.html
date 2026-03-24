@@ -620,27 +620,27 @@
         }
 
         // 3) Camera upload function 
-        window.openCamera = function() {
-            const fileInput = document.getElementById('cameraInput');
-            if (fileInput) {
-                fileInput.click();
-                fileInput.onchange = function(event) {
-                    const file = event.target.files[0];
-                    if (file && profilePhoto) {
-                        const reader = new FileReader();
-                        reader.onload = function(e) {
-                            profilePhoto.src = e.target.result;
-                            showToastMessage("📸 Profile picture updated successfully!");
-                        };
-                        reader.readAsDataURL(file);
-                    } else if (!file) {
-                        showToastMessage("⚠️ No image selected.");
-                    }
-                };
-            } else {
-                showToastMessage("Camera input not ready.");
-            }
-        };
+       // window.openCamera = function() {
+          //  const fileInput = document.getElementById('cameraInput');
+          //  if (fileInput) {
+          //      fileInput.click();
+          //      fileInput.onchange = function(event) {
+            //        const file = event.target.files[0];
+             //       if (file && profilePhoto) {
+             //           const reader = new FileReader();
+              //          reader.onload = function(e) {
+              //              profilePhoto.src = e.target.result;
+              //              showToastMessage("📸 Profile picture updated successfully!");
+               //         };
+                //        reader.readAsDataURL(file);
+               //     } else if (!file) {
+               //         showToastMessage("⚠️ No image selected.");
+             //       }
+           //     };
+        //    } else {
+       //         showToastMessage("Camera input not ready.");
+     //       }
+    //    };
 
         // 4) All images interactive
         const allImages = document.querySelectorAll('img');
